@@ -4,9 +4,15 @@ const ServicesSchema = new Schema({
   name: {
     type: String,
     trim: true,
+    required: true,
   },
   slots: {
-    type: Array,
+    type: [String],
+    required: true,
+  },
+  price: {
+    type: String,
+    required: true,
   },
 })
 

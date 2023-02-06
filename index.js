@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
 const services = require('./api/routes/services')
+const booking = require('./api/routes/booking')
 require('dotenv').config()
 
 // server
@@ -28,6 +29,8 @@ app.use(cors())
 
 // services router
 app.use('/services', services)
+// booking router
+app.use('/booking', booking)
 
 // route
 app.get('/', (req, res) => {
